@@ -25,12 +25,13 @@ syn keyword spikeFunction s_readline s_read_packet
 syn match spikeComment "//.*$"
 
 " Regions
-syn region yangString start=/"/ skip=/\\./ end=/"/
-syn region yangString start=/'/ skip=/\\./ end=/'/
+syn region spikeString start=/"/ skip=/\\./ end=/"/
+syn region spikeString start=/'/ skip=/\\./ end=/'/
 
 " Highlight
 highlight link spikeFunction Function
 highlight link spikeFunctionFuzzPoint Function
 highlight link spikeComment Comment
+highlight link spikeString String
 
 let b:current_syntax = "spike"
