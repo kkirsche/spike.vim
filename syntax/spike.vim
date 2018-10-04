@@ -24,6 +24,10 @@ syn keyword spikeFunction s_readline s_read_packet
 " Matches
 syn match spikeComment "//.*$"
 
+" Regions
+syn region yangString start=/"/ skip=/\\./ end=/"/
+syn region yangString start=/'/ skip=/\\./ end=/'/
+
 " Highlight
 highlight link spikeFunction Function
 highlight link spikeFunctionFuzzPoint Function
