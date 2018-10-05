@@ -23,9 +23,10 @@ syn keyword spikeFunction s_readline s_read_packet
 
 " Matches
 syn match spikeComment "//.*$"
+syn match spikeSpecialChar contained "\r\n"
 
 " Regions
-syn region spikeString start=/"/ skip=/\\./ end=/"/
+syn region spikeString start=/"/ skip=/\\./ end=/"/ contains=spikeSpecialChar
 syn region spikeString start=/'/ skip=/\\./ end=/'/
 
 " Highlight
@@ -33,5 +34,6 @@ highlight link spikeFunction Function
 highlight link spikeFunctionFuzzPoint Function
 highlight link spikeComment Comment
 highlight link spikeString String
+highlight link spikeSpecialChar SpecialChar
 
 let b:current_syntax = "spike"
