@@ -23,7 +23,11 @@ syn keyword spikeFunction s_readline s_read_packet
 
 " Matches
 syn match spikeComment "//.*$"
-syn match spikeSpecialChar contained "\\r|\\n|\\t|\\|\\f|\\b"
+syn match spikeSpecialChar contained "\\r"
+syn match spikeSpecialChar contained "\\n"
+syn match spikeSpecialChar contained "\\t"
+syn match spikeSpecialChar contained "\\f"
+syn match spikeSpecialChar contained "\\b"
 
 " Regions
 syn region spikeString start=/"/ skip=/\\./ end=/"/ contains=spikeSpecialChar
